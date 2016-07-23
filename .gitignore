@@ -1,0 +1,4 @@
+*.swp
+.DS_Store
+*.zip
+ez_setup.py

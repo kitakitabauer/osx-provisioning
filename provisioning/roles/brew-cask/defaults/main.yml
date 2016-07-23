@@ -1,0 +1,28 @@
+homebrew_taps:
+  - caskroom/versions
+homebrew_cask_packages:
+  - 1password
+  - alfred
+  - appcleaner
+  - bettertouchtool
+  - caffeine
+  - clipmenu
+  - dropbox
+  - dash
+  - gas-mask
+  - google-chrome
+  - google-japanese-ime
+  - intellij-idea
+  - iterm2
+  - karabiner
+  - kindle
+  - sequel-pro
+  - skitch
+  - skype
+  - slack
+  - sourcetree
+  - sublime-text
+  - vagrant
+  - vagrant-manager
+  # - virtualbox
+  - webstorm

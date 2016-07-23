@@ -1,0 +1,185 @@
+#
+# see also https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/defaults.1.html 
+# 
+
+mac_defaults_settings:
+  - {
+    domain: com.apple.ImageCapture,
+    key: disableHotPlug,
+    type: bool,
+    value: false,
+  }
+
+  # Finder
+  - {
+    domain: com.apple.finder,
+    key: NewWindowTarget,
+    type: string,
+    value: PfDe,
+  }
+  - {
+    domain: com.apple.finder,
+    key: NewWindowTargetPath,
+    type: string,
+    value: "{{ ansible_user_dir }}/Desktop",
+  }
+  - {
+    domain: com.apple.finder,
+    key: ShowExternalHardDrivesOnDesktop,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.finder,
+    key: ShowMountedServersOnDesktop,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.finder,
+    key: ShowRemovableMediaOnDesktop,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.finder,
+    key: ShowStatusBar,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.finder,
+    key: ShowPathbar,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.finder,
+    key: AppleShowAllFiles,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.finder,
+    key: QLEnableTextSelection,
+    type: bool,
+    value: true,
+  }
+ 
+  # Trackpad
+ 
+  # Enable clicking by tap
+  # cannot enable...
+  - {
+    domain: com.apple.AppleMultitouchTrackpad,
+    key: Clicking,
+    type: int,
+    value: 1,
+  }
+  - {
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad,
+    key: Clicking,
+    type: int,
+    value: 1,
+  }
+ 
+  # Enable Look up & data detectors with The Three Finger Tap
+  - {
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad,
+    key: TrackpadThreeFingerTapGesture,
+    type: int,
+    value: 2,
+  }
+ 
+  # Dock
+  - {
+    domain: com.apple.dock,
+    key: autohide,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.dock,
+    key: magnification,
+    type: bool,
+    value: true,
+  }
+  - {
+    domain: com.apple.dock,
+    key: orientation,
+    type: string,
+    value: "left",
+  }
+  - {
+    domain: com.apple.dock,
+    key: tilesize,
+    type: int,
+    value: 32,
+  }
+  - {
+    domain: com.apple.dock,
+    key: largesize,
+    type: int,
+    value: 64,
+  }
+ 
+  # Menubar
+  - {
+    domain: com.apple.menuextra.battery,
+    key: ShowPercent,
+    type: string,
+    value: "YES",
+  }
+  # - {
+  #   domain: com.apple.menuextra.clock,
+  #   key: DateFormat,
+  #   type: string,
+  #   value: "M\u6708d\u65e5(EEE)  H:mm:ss",
+  # }
+ 
+  # Others
+  - {
+    domain: com.apple.desktopservices,
+    key: DSDontWriteNetworkStores,
+    type: bool,
+    value: true,
+  }
+ 
+mac_global_domain_defaults_settings:
+  - {
+    key: InitialKeyRepeat,
+    type: int,
+    value: 15,
+  }
+  - {
+    key: KeyRepeat,
+    type: int,
+    value: 3,
+  }
+  - {
+    key: com.apple.trackpad.scaling,
+    type: float,
+    value: 16,
+  }
+  # cannot enable...
+  - {
+    key: com.apple.mouse.tapBehavior,
+    type: int,
+    value: 1,
+  }
+  - {
+    key: NSDocumentSaveNewDocumentsToCloud,
+    type: bool,
+    value: false,
+  }
+  - {
+    key: AppleShowAllExtensions,
+    type: bool,
+    value: true
+  }
+  - {
+    key: com.apple.swipescrolldirection,
+    type: bool,
+    value: false
+  }
+

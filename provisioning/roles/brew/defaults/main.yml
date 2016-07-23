@@ -1,0 +1,21 @@
+---
+homebrew_repositories: []
+
+homebrew_packages:
+  - ag
+  - autojump
+  - csshx
+  #- ctags
+  - ghq
+  - jq
+  - macvim
+  - node
+  - peco
+  - tig
+  - tmux
+  - tree
+  - vim
+  - wget
+  - zsh
+  - zsh-completions
+  - zsh-syntax-highlighting
