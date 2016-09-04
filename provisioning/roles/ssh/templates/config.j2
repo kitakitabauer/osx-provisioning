@@ -1,4 +1,11 @@
-Host github.com
-  HostName github.com
-  IdentityFile 
-  User matsuokah
+StrictHostKeyChecking no
+User kitahara_yuki
+Host ghe.ca-tools.org
+ Hostname ghe.ca-tools.org
+ PreferredAuthentications publickey
+ IdentityFile ~/.ssh/id_rsa
+Host github github.com
+ User git
+ HostName github.com
+ PreferredAuthentications publickey
+ IdentityFile ~/.ssh/id_rsa_github

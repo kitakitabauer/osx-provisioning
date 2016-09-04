@@ -1,15 +1,64 @@
+[init]
+  templatedir = ~/.git_templates/
 [user]
-  email = matsuoka.hide@gmail.com
-  name = Hideki Matsuoka
+  name = kitakitabauer
+  email = kitakita.d.kitakita@gmail.com
+  useconfigonly = true
+[user "ssh://git@ghe.ca-tools.org/"]
+  name = Kitahara Yuki
+  email = kitahara_yuki@cyberagent.co.jp
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[user "https://ghe.ca-tools.org/"]
+  name = Kitahara Yuki
+  email = kitahara_yuki@cyberagent.co.jp
+[credential]
+  helper = osxkeychain
+[color]
+  ui = auto
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
 [core]
-  autocrlf = input
-  editor = vim -c \"set fenc=utf-8\"
-  excludesfile = ~/.gitignore_global
-[push]
-  default = matching
+  editor = vim
+  excludesfile = /Users/a12380/.gitignore_global
 [alias]
-  l = log --graph --name-status --pretty=format:\"%C(red)%h %C(green)%an %Creset%s %C(yellow)%d%Creset\"
-[filter "lfs"]
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
+  # g = git
+  st = status
+  br = branch
+  sb = show-branch
+  ci = commit -v
+  co = checkout
+  # リポジトリの歴史をひとつの線でたどる
+  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+
+  # diff関連
+  dm = diff master           # masterとのdiff
+  dw = diff --color-words    # 単語単位でいろつけてdiff
+  dc = diff --cached         # addされているものとのdiff
+  ds = diff --staged         # 同上(1.6.1移行)
+  d1 = diff HEAD~            # HEADから1つ前とdiff
+  d2 = diff HEAD~~           # HEADから2つ前とdiff
+  d3 = diff HEAD~~~          # HEADから3つ前とdiff
+  d4 = diff HEAD~~~~         # HEADから4つ前とdiff
+  d5 = diff HEAD~~~~~        # HEADから5つ前とdiff
+  d10 = diff HEAD~~~~~~~~~~  # HEADから10前とdiff
+  # リポジトリを参照
+  see = browse
+[ghq]
+  root = /Users/a12380/.ghq
+[difftool "sourcetree"]
+  cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+  cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+  trustExitCode = true
+[filter "media"]
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
+[filter "hawser"]
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
   required = true
