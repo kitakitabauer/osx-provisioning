@@ -24,5 +24,4 @@ homebrew_cask_packages:
   - sublime-text
   - vagrant
   - vagrant-manager
-  # - virtualbox
   - webstorm

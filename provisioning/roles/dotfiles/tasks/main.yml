@@ -1,0 +1,13 @@
+- name: git clone dotfiles
+  git: repo="{{ git.repo }}" dest="{{ git.dest }}"
+  register: ret_clone
+
+- name: copy dotfiles
+  copy: src="{{ git.dest }}" dest=~
+  when: ret_clone|changed
+  register: ret_copy
+
+- name: link dotfiles
+  shell: >
+    cd ~/dotfiles ; sh symlink.sh
+  when: ret_copy|changed

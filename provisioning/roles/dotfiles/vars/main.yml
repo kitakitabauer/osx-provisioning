@@ -1,0 +1,4 @@
+---
+git:
+  repo: git@github.com:kitakitabauer/dotfiles.git
+  dest: ~/.ghq/github.com/kitakitabauer/dotfiles
