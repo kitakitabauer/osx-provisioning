@@ -4,7 +4,6 @@
 
 - name: copy dotfiles
   copy: src="{{ git.dest }}" dest=~
-  when: ret_clone|changed
   register: ret_copy
 
 - name: link dotfiles
