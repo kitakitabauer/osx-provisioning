@@ -23,32 +23,9 @@
   grep = auto
 [core]
   editor = vim
-  excludesfile = /Users/a12380/.gitignore_global
-[alias]
-  # g = git
-  st = status
-  br = branch
-  sb = show-branch
-  ci = commit -v
-  co = checkout
-  # リポジトリの歴史をひとつの線でたどる
-  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
-
-  # diff関連
-  dm = diff master           # masterとのdiff
-  dw = diff --color-words    # 単語単位でいろつけてdiff
-  dc = diff --cached         # addされているものとのdiff
-  ds = diff --staged         # 同上(1.6.1移行)
-  d1 = diff HEAD~            # HEADから1つ前とdiff
-  d2 = diff HEAD~~           # HEADから2つ前とdiff
-  d3 = diff HEAD~~~          # HEADから3つ前とdiff
-  d4 = diff HEAD~~~~         # HEADから4つ前とdiff
-  d5 = diff HEAD~~~~~        # HEADから5つ前とdiff
-  d10 = diff HEAD~~~~~~~~~~  # HEADから10前とdiff
-  # リポジトリを参照
-  see = browse
+  excludesfile = ~/.gitignore_global
 [ghq]
-  root = /Users/a12380/.ghq
+  root = ~/go/src
 [difftool "sourcetree"]
   cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
@@ -62,3 +39,5 @@
   clean = git hawser clean %f
   smudge = git hawser smudge %f
   required = true
+[web]
+  browser = google-chrome
