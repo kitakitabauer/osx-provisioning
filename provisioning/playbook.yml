@@ -7,7 +7,7 @@
       register: ssh 
   roles:
     # App Installations
-    # - brew
+    - brew
     # - brew-cask
 
     # Configurations
