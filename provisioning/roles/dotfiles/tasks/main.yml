@@ -1,3 +1,13 @@
+- name: install gvm
+  shell: >
+    (curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) | bash
+    creates=~/.gvm
+
+- name: install nodebrew
+  shell: >
+    curl -L git.io/nodebrew | perl - setup
+    creates=~/.nodebrew
+
 - name: git clone dotfiles
   git: repo="{{ git.repo }}" dest="{{ git.dest }}"
   register: ret_clone
