@@ -1,5 +1,6 @@
 homebrew_taps:
   - caskroom/versions
+  - simeji/jid
 homebrew_cask_packages:
   - 1password
   - alfred
@@ -12,8 +13,9 @@ homebrew_cask_packages:
   - gas-mask
   - google-chrome
   - google-japanese-ime
-  - intellij-idea
+  - intellij-idea-ce
   - iterm2
+  - jid
   - karabiner
   - kindle
   - sequel-pro
