@@ -1,5 +1,5 @@
 StrictHostKeyChecking no
-User kitahara_yuki
+#User kitahara_yuki
 Host ghe.ca-tools.org
  Hostname ghe.ca-tools.org
  PreferredAuthentications publickey
@@ -9,3 +9,11 @@ Host github github.com
  HostName github.com
  PreferredAuthentications publickey
  IdentityFile ~/.ssh/id_rsa_github
+ Compression yes
+ Ciphers arcfour256
+Host bitbucket.org
+ User git
+ Port 22
+ Hostname bitbucket.org
+ #IdentityFile ~/.ssh/id_rsa_github
+ IdentityFile ~/.ssh/id_rsa_bitbucket
